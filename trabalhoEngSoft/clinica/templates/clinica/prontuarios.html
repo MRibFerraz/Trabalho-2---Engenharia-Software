@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Prontuários</title>
+</head>
+<body>
+    <div class="barra-navegacao">
+        <ul>
+            <li><a href="novofuncionario"><i class="fa-solid fa-address-card"></i> Novo Funcionário</a></li>
+            <li><a href="novopaciente"><i class="fa-solid fa-user-plus"></i> Novo Paciente</a></li>
+            <li><a href="funcionarios"><i class="fa-solid fa-users-between-lines"></i> Funcionários</a></li>
+            <li><a href="pacientes"><i class="fa-solid fa-user-injured"></i> Pacientes</a></li>
+            <li><a href="enderecos"><i class="fa-solid fa-location-dot"></i>Endereços</a></li>
+            <li><a href="todosagendamentos"><i class="fa-solid fa-clipboard-list"></i> Todos os Agendamentos</a></li>
+            <li><a href="prontuarios"><i class="fa-solid fa-stethoscope"></i> Prontuários</a></li>
+            <li class="login"><a href="index"><i class="fa-solid fa-right-to-bracket"></i> Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="intro">
+        <h1>Prontuários</h1>
+    </div>
+    <div class="exibirfunc">
+        <table class="tabelada">
+            <tr class="init">
+                <td>Código</td>
+                <td>Nome</td> 
+                <td>Medicamentos</td>
+                <td>Atestados</td>
+                <td>Exames</td>
+            </tr>
+            {% for pront in prontuarios %}
+            <tr>
+                <td>{{pront.codigo}}</td>
+                <td>{{pront.codigo.nome}}</td> 
+                <td>{{pront.medicamentos}}</td>
+                <td>{{pront.atestados}}</td>
+                <td>{{pront.exames}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="https://kit.fontawesome.com/abceda3d36.js" crossorigin="anonymous"></script>
+</body>
+</html>
