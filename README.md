@@ -11,7 +11,7 @@ Grupo:
 
 Instale o Python (https://www.python.org/)
 
-Em seguida, na pasta 'trabalho', execute os seguintes comandos:
+Em seguida, na pasta 'trabalhoEngSoft', execute os seguintes comandos:
     
     pip install django
 
